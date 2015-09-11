@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OAuth2Demo.IdentityServer", "OAuth2Demo.IdentityServer\OAuth2Demo.IdentityServer.csproj", "{235754E6-03FA-411A-BE81-A8A9C3793BD3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OAuth2Demo.ApiClient", "OAuth2Demo.ApiClient\OAuth2Demo.ApiClient.csproj", "{1C65B436-AE69-42DA-944F-2F2DF452B47D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OAuth2Demo.IdentityServer.Tests", "OAuth2Demo.IdentityServer.Tests\OAuth2Demo.IdentityServer.Tests.csproj", "{7827CA71-2B8B-4E40-88EE-226D904F12C9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{235754E6-03FA-411A-BE81-A8A9C3793BD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{235754E6-03FA-411A-BE81-A8A9C3793BD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{235754E6-03FA-411A-BE81-A8A9C3793BD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{235754E6-03FA-411A-BE81-A8A9C3793BD3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C65B436-AE69-42DA-944F-2F2DF452B47D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C65B436-AE69-42DA-944F-2F2DF452B47D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C65B436-AE69-42DA-944F-2F2DF452B47D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C65B436-AE69-42DA-944F-2F2DF452B47D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7827CA71-2B8B-4E40-88EE-226D904F12C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7827CA71-2B8B-4E40-88EE-226D904F12C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7827CA71-2B8B-4E40-88EE-226D904F12C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7827CA71-2B8B-4E40-88EE-226D904F12C9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

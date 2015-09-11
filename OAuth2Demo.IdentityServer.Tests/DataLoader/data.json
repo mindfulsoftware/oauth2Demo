@@ -1,0 +1,96 @@
+﻿{
+    "clients": {
+        "remove": [ "demo-api" ],
+        "add": [
+            {
+                "Enabled": true,
+                "ClientId": "demo-api",
+                "ClientName": "Demo API",
+                "ClientUri" :  "https://localhost:44306",
+                "Flow": "ResourceOwner",
+                "RequireConsent": false,
+                "ClientSecrets": [
+                    { "Value": "sha256:C893EA72-CA50-475E-BC55-161D1557FE5F" }
+                ],
+                "RedirectUris": [
+                    "https://localhost:44306/api/"
+                ],
+                "PostLogoutRedirectUris": [
+                    "https://localhost:44306/api/"
+                ],
+                "AllowedScopes": [
+                    "openid",
+                    "profile",
+                    "email",
+                    "roles",
+                    "demo-api"
+                ],
+                "AccessTokenType": "JWT",
+                "AccessTokenLifetime": 3600
+            }
+        ]
+    },
+    "scopes": {
+        "remove": [ "openid", "profile", "email", "roles", "all_claims", "demo-api" ],
+        "add": [
+            {
+                "Name": "profile",
+                "DisplayName": "User profile",
+                "Required": true,
+                "Type": "Identity",
+                "Claims": [
+                    { "Name": "name", "AlwaysIncludeInIdToken": true },
+                    { "Name": "given_name", "AlwaysIncludeInIdToken": true },
+                    { "Name": "family_name", "AlwaysIncludeInIdToken": true },
+                    { "Name": "middle_name", "AlwaysIncludeInIdToken": true },
+                    { "Name": "nickname", "AlwaysIncludeInIdToken": true },
+                    { "Name": "preferred_username", "AlwaysIncludeInIdToken": true },
+                    { "Name": "profile", "AlwaysIncludeInIdToken": true },
+                    { "Name": "picture", "AlwaysIncludeInIdToken": true },
+                    { "Name": "website", "AlwaysIncludeInIdToken": true },
+                    { "Name": "gender", "AlwaysIncludeInIdToken": true },
+                    { "Name": "birthdate", "AlwaysIncludeInIdToken": true },
+                    { "Name": "zoneinfo", "AlwaysIncludeInIdToken": true },
+                    { "Name": "locale", "AlwaysIncludeInIdToken": true },
+                    { "Name": "updated_at", "AlwaysIncludeInIdToken": true }
+                ]
+            },
+            {
+                "Name": "email",
+                "DisplayName": "Your email address",
+                "Required": true,
+                "Type": "Identity",
+                "Claims": [
+                    { "Name": "email", "AlwaysIncludeInIdToken": true },
+                    { "Name": "email_verified", "AlwaysIncludeInIdToken": true }
+                ]
+            },
+            {
+                "Name": "roles",
+                "DisplayName": "User roles",
+                "Required": true,
+                "Type": "Identity",
+                "Claims": [
+                    { "Name": "role", "AlwaysIncludeInIdToken": true }
+                ]
+            },
+            {
+                "Name": "all_claims",
+                "DisplayName": "All user information",
+                "Required": true,
+                "Type": "Identity",
+                "IncludeAllClaimsForUser": true
+            },
+            {
+                "Name": "demo-api",
+                "DisplayName": "Demo API",
+                "Required": true,
+                "Type": "Resource",
+                "IncludeAllClaimsForUser": true,
+                "Claims": [
+                     { "Name": "role", "AlwaysIncludeInIdToken": true }
+                ]
+            }
+        ]
+    }
+}
