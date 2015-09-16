@@ -1,29 +1,24 @@
 ﻿{
     "clients": {
-        "remove": [ "demo-api" ],
+        "remove": [ "demo-website" ],
         "add": [
             {
                 "Enabled": true,
-                "ClientId": "demo-api",
-                "ClientName": "Demo API",
-                "ClientUri" :  "https://localhost:44306",
-                "Flow": "ResourceOwner",
-                "RequireConsent": false,
-                "ClientSecrets": [
-                    { "Value": "sha256:C893EA72-CA50-475E-BC55-161D1557FE5F" }
-                ],
+                "ClientId": "demo-website",
+                "ClientName": "Demo Website",
+                "ClientUri" :  "https://localhost:44308/",
+                "Flow": "Hybrid",
+                "RequireConsent": true,
                 "RedirectUris": [
-                    "https://localhost:44306/api/"
+                    "https://localhost:44308/"
                 ],
                 "PostLogoutRedirectUris": [
-                    "https://localhost:44306/api/"
+                    "https://localhost:44308/"
                 ],
                 "AllowedScopes": [
                     "openid",
-                    "profile",
-                    "email",
                     "roles",
-                    "demo-api"
+                    "demo-website"
                 ],
                 "AccessTokenType": "JWT",
                 "AccessTokenLifetime": 3600
@@ -31,38 +26,15 @@
         ]
     },
     "scopes": {
-        "remove": [ "openid", "profile", "email", "roles", "all_claims", "demo-api" ],
+        "remove": [ "openid", "roles", "demo-website" ],
         "add": [
-            {
-                "Name": "profile",
-                "DisplayName": "User profile",
+			{
+                "Name": "openid",
+                "DisplayName": "User identifier",
                 "Required": true,
                 "Type": "Identity",
                 "Claims": [
-                    { "Name": "name", "AlwaysIncludeInIdToken": true },
-                    { "Name": "given_name", "AlwaysIncludeInIdToken": true },
-                    { "Name": "family_name", "AlwaysIncludeInIdToken": true },
-                    { "Name": "middle_name", "AlwaysIncludeInIdToken": true },
-                    { "Name": "nickname", "AlwaysIncludeInIdToken": true },
-                    { "Name": "preferred_username", "AlwaysIncludeInIdToken": true },
-                    { "Name": "profile", "AlwaysIncludeInIdToken": true },
-                    { "Name": "picture", "AlwaysIncludeInIdToken": true },
-                    { "Name": "website", "AlwaysIncludeInIdToken": true },
-                    { "Name": "gender", "AlwaysIncludeInIdToken": true },
-                    { "Name": "birthdate", "AlwaysIncludeInIdToken": true },
-                    { "Name": "zoneinfo", "AlwaysIncludeInIdToken": true },
-                    { "Name": "locale", "AlwaysIncludeInIdToken": true },
-                    { "Name": "updated_at", "AlwaysIncludeInIdToken": true }
-                ]
-            },
-            {
-                "Name": "email",
-                "DisplayName": "Your email address",
-                "Required": true,
-                "Type": "Identity",
-                "Claims": [
-                    { "Name": "email", "AlwaysIncludeInIdToken": true },
-                    { "Name": "email_verified", "AlwaysIncludeInIdToken": true }
+                    { "Name": "sub", "AlwaysIncludeInIdToken": true }
                 ]
             },
             {
@@ -75,15 +47,8 @@
                 ]
             },
             {
-                "Name": "all_claims",
-                "DisplayName": "All user information",
-                "Required": true,
-                "Type": "Identity",
-                "IncludeAllClaimsForUser": true
-            },
-            {
-                "Name": "demo-api",
-                "DisplayName": "Demo API",
+                "Name": "demo-website",
+                "DisplayName": "Demo Website",
                 "Required": true,
                 "Type": "Resource",
                 "IncludeAllClaimsForUser": true,

@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OAuth2Demo.ApiClient", "OAu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OAuth2Demo.IdentityServer.Tests", "OAuth2Demo.IdentityServer.Tests\OAuth2Demo.IdentityServer.Tests.csproj", "{7827CA71-2B8B-4E40-88EE-226D904F12C9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OAuth2Demo.MvcClient", "OAuth2Demo.MvcClient\OAuth2Demo.MvcClient.csproj", "{FE99B827-910F-4013-98BF-09F8C6B0C927}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{7827CA71-2B8B-4E40-88EE-226D904F12C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7827CA71-2B8B-4E40-88EE-226D904F12C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7827CA71-2B8B-4E40-88EE-226D904F12C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE99B827-910F-4013-98BF-09F8C6B0C927}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE99B827-910F-4013-98BF-09F8C6B0C927}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE99B827-910F-4013-98BF-09F8C6B0C927}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE99B827-910F-4013-98BF-09F8C6B0C927}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

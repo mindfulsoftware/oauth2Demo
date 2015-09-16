@@ -53,18 +53,23 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataLoadTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="data.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    <None Include="DataLoader\data.json" />
+    <None Include="DataLoader\DataLoad.bat" />
+    <None Include="DataLoader\IdSvr3EfCli.exe.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <Content Include="commandLine.txt" />
+    <Content Include="DataLoader\AutoMapper.dll" />
+    <Content Include="DataLoader\EntityFramework.dll" />
+    <Content Include="DataLoader\EntityFramework.SqlServer.dll" />
+    <Content Include="DataLoader\IdentityServer3.dll" />
+    <Content Include="DataLoader\IdentityServer3.EntityFramework.dll" />
+    <Content Include="DataLoader\IdSvr3EfCli.exe" />
+    <Content Include="DataLoader\Newtonsoft.Json.dll" />
+    <Content Include="DataLoader\Owin.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
