@@ -24,7 +24,7 @@ namespace OAuth2Demo.IdentityServer {
                 });
 
             });
-            IdentityServer3.Core.Models.AccessTokenType
+
             app.Map("/admin", adminApp => {
                 adminApp.UseIdentityManager(new IdentityManagerOptions() {
                     Factory = new IdentityManagerServiceFactory().Configure(connectionString)

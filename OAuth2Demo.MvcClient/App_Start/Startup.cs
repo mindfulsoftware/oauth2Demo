@@ -1,9 +1,13 @@
 ﻿using Microsoft.Owin;
+using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.OpenIdConnect;
 using OAuth2Demo.MvcClient.Infrastructure;
 using Owin;
+using System.Collections.Generic;
 using System.Configuration;
+using System.IdentityModel.Tokens;
+using System.Security.Claims;
 using System.Threading.Tasks;
 
 [assembly: OwinStartup(typeof(OAuth2Demo.MvcClient.App_Start.Startup))]
@@ -11,6 +15,8 @@ using System.Threading.Tasks;
 namespace OAuth2Demo.MvcClient.App_Start {
     public class Startup {
         public void Configuration(IAppBuilder app) {
+
+            JwtSecurityTokenHandler.InboundClaimTypeMap = new Dictionary<string, string>(); 
 
             app.UseCookieAuthentication(new CookieAuthenticationOptions {
                 AuthenticationType = "Cookies"
@@ -30,13 +36,6 @@ namespace OAuth2Demo.MvcClient.App_Start {
                 Scope = "openid roles demo-website",
 
                 SignInAsAuthenticationType = "Cookies",
-
-                Notifications = new OpenIdConnectAuthenticationNotifications() {
-                    SecurityTokenValidated = x => {
-
-                        return Task.FromResult(0);
-                    }
-                }
             });
 
         }

@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Security.Claims;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using Thinktecture.IdentityModel.Mvc;
 
@@ -9,10 +7,11 @@ namespace OAuth2Demo.MvcClient.Controllers
 {
     public class ClaimsController : BaseController {
 
-        //[ResourceAuthorize("read", "claims")]
-        [Authorize]
+        [ResourceAuthorize("read", "claims")]
         public ActionResult Index() {
-            return Json(new object[] { "asdf", "zxcv" });
+            return Json(
+                ((ClaimsIdentity)User.Identity).Claims.Select(x => new { Type = x.Type, Value = x.Value })
+            );
         }
     }
 }
