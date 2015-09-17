@@ -1,12 +1,12 @@
 ﻿{
     "clients": {
-        "remove": [ "demo-website" ],
+        "remove": [ "demo-website", "demo-webapi" ],
         "add": [
             {
                 "Enabled": true,
                 "ClientId": "demo-website",
                 "ClientName": "Demo Website",
-                "ClientUri" :  "https://localhost:44308/",
+                "ClientUri": "https://localhost:44308/",
                 "Flow": "Implicit",
                 "RequireConsent": true,
                 "RedirectUris": [
@@ -22,11 +22,29 @@
                 ],
                 "AccessTokenType": "JWT",
                 "AccessTokenLifetime": 3600
+            },
+            {
+                "Enabled": true,
+                "ClientId": "demo-webapi",
+                "ClientName": "Demo Web Api",
+                "ClientUri" :  "https://localhost:44306/",
+                "Flow": "ResourceOwner",
+                "ClientSecrets": [
+                    { "Value": "sha256:C893EA72-CA50-475E-BC55-161D1557FE5F" }
+                ],
+                "RequireConsent": true,
+                "AllowedScopes": [
+                    "openid",
+                    "roles",
+                    "demo-webapi"
+                ],
+                "AccessTokenType": "JWT",
+                "AccessTokenLifetime": 3600
             }
         ]
     },
     "scopes": {
-        "remove": [ "openid", "roles", "demo-website" ],
+        "remove": [ "openid", "roles", "demo-website", "demo-webapi" ],
         "add": [
 			{
                 "Name": "openid",
@@ -49,6 +67,16 @@
             {
                 "Name": "demo-website",
                 "DisplayName": "Demo Website",
+                "Required": true,
+                "Type": "Resource",
+                "IncludeAllClaimsForUser": true,
+                "Claims": [
+                    { "Name": "role", "AlwaysIncludeInIdToken": true }
+                ]
+            },
+            {
+                "Name": "demo-webapi",
+                "DisplayName": "Demo Demo Web Api",
                 "Required": true,
                 "Type": "Resource",
                 "IncludeAllClaimsForUser": true,
