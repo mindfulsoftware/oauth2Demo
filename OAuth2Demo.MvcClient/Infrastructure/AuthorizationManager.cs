@@ -9,13 +9,13 @@ namespace OAuth2Demo.MvcClient.Infrastructure {
 
             switch (context.Resource.First().Value) {
                 case "claims":
-                    return AuthorizeBlog(context);
+                    return AuthorizeClaims(context);
                 default:
                     return Nok();
             }
         }
 
-        Task<bool> AuthorizeBlog(ResourceAuthorizationContext context) {
+        Task<bool> AuthorizeClaims(ResourceAuthorizationContext context) {
             switch (context.Action.First().Value) {
                 case "read":
                     return Eval(context.Principal.HasClaim("role", "website-claims"));

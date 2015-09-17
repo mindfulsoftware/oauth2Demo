@@ -7,7 +7,7 @@
                 "ClientId": "demo-website",
                 "ClientName": "Demo Website",
                 "ClientUri" :  "https://localhost:44308/",
-                "Flow": "Hybrid",
+                "Flow": "Implicit",
                 "RequireConsent": true,
                 "RedirectUris": [
                     "https://localhost:44308/"

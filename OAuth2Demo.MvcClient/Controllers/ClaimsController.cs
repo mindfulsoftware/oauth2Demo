@@ -1,5 +1,5 @@
-﻿using System.Security.Claims;
-using System.Linq;
+﻿using System.Linq;
+using System.Security.Claims;
 using System.Web.Mvc;
 using Thinktecture.IdentityModel.Mvc;
 
