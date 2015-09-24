@@ -13,6 +13,8 @@ namespace OAuth2Demo.ApiClient
 
             config.Filters.Add(new RequireHttpsAttribute());
 
+            config.EnableCors();
+
             // Web API routes
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",

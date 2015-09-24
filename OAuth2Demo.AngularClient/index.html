@@ -1,0 +1,56 @@
+﻿<html ng-app="app">
+<head>
+    <title></title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/toastr.min.css" rel="stylesheet" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+</head>
+<body>
+    <div>
+        <div ng-include src="'layout/shell.html'"></div>
+    </div>
+
+    <script src="Scripts/jquery-1.9.1.min.js"></script>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/angular-route.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/toastr.min.js"></script>
+
+    <script src="app.module.js"></script>
+
+    <!-- blocks -->
+    <script src="blocks/exception/exception.module.js"></script>
+    <script src="blocks/exception/exception-handler.provider.js"></script>
+    <script src="blocks/exception/exception.js"></script>
+    <script src="blocks/logger/logger.module.js"></script>
+    <script src="blocks/logger/logger.js"></script>
+    <script src="blocks/router/router.module.js"></script>
+    <script src="blocks/router/routehelper.js"></script>
+
+    <!-- core module -->
+    <script src="core/core.module.js"></script>
+    <script src="core/constants.js"></script>
+    <script src="core/config.js"></script>
+    <script src="core/common.js"></script>
+
+    <!-- data module -->
+    <script src="data/data.module.js"></script>
+    <script src="data/dataservice.account.js"></script>
+
+    <!-- layout module -->
+    <script src="layout/layout.module.js"></script>
+    <script src="layout/shell.js"></script>
+
+    <!-- account module -->
+    <script src="account/account.module.js"></script>
+    <script src="account/account.js"></script>
+    <script src="account/config.route.js"></script>
+
+    <!-- claims module -->
+    <script src="users/claims.module.js"></script>
+    <script src="users/claims.js"></script>
+    <script src="users/config.route.js"></script>
+
+</body>
+</html>

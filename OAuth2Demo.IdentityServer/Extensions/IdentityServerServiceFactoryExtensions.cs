@@ -10,6 +10,7 @@ namespace IdentityServer3.Core.Configuration {
             var serviceOptions = new EntityFrameworkServiceOptions { ConnectionString = connectionString };
             factory.RegisterOperationalServices(serviceOptions);
             factory.RegisterConfigurationServices(serviceOptions);
+            //factory.RegisterClientStore(serviceOptions);
 
             factory.Register(new Registration<Context>(resolver => new Context(connectionString)));
             factory.Register(new Registration<UserStore>());

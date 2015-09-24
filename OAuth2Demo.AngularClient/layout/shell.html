@@ -1,0 +1,27 @@
+﻿<div data-ng-controller="Shell as vm">
+    <header class="clearfix">
+        <nav class="navbar navbar-default">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">OAuth2 Demo - Angular Client</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="#/account">Account</a></li>
+                    <li><a href="#/claims">Claims</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section id="content">
+        <div ng-view></div>
+    </section>
+</div>
+
+

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Threading.Tasks;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace OAuth2Demo.ApiClient.Controllers {
 
@@ -15,6 +16,7 @@ namespace OAuth2Demo.ApiClient.Controllers {
 
     [RequireHttps]
     [RoutePrefix("api/account")]
+    [EnableCors(origins: "http://localhost:61664", headers: "*", methods: "*")]
     public class AccountController : ApiController {
 
 
