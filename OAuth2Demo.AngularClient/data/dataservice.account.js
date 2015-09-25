@@ -5,9 +5,9 @@
         .module('app.data')
         .factory('dataserviceAccount', dataserviceAccount);
 
-    dataserviceAccount.$inject = ['$http', '$location', '$q', 'exception', 'logger', 'common'];
+    dataserviceAccount.$inject = ['$http', '$location', '$q', 'exception', 'logger', 'common', 'currentUser'];
 
-    function dataserviceAccount($http, $location, $q, exception, logger, common) {
+    function dataserviceAccount($http, $location, $q, exception, logger, common, currentUser) {
 
         var service = {
             login: login,
@@ -37,8 +37,9 @@
                     exception.catcher('XHR Failed for account login')(err);
                 });
 
-            function getloginComplete(data, status, headers, config) {
-                return data.data[0].data.results;
+            function getloginComplete(response, status, headers, config) {
+                currentUser.setProfile(username, response.data.AccessToken);
+                return username;
             }
         }
 

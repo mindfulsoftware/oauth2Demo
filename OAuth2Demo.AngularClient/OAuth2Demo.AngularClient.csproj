@@ -71,6 +71,8 @@
     <Content Include="core\common.js" />
     <Content Include="core\config.js" />
     <Content Include="core\constants.js" />
+    <Content Include="core\currentUser.js" />
+    <Content Include="core\tokenInterceptor.js" />
     <Content Include="data\data.module.js" />
     <Content Include="data\dataservice.account.js" />
     <Content Include="data\dataservice.claims.js" />

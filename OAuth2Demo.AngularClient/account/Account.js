@@ -6,21 +6,18 @@
         .controller('Account', Account);
 
     /* @ngInject */
-    //Account.$inject['logger'];
-
-    function Account(logger, dataserviceAccount) {
+    function Account(logger, dataserviceAccount, common, currentUser) {
         var vm = this;
         vm.title = 'Account';
         vm.username = 'kirk';
         vm.password = 'password';
+        vm.currentUser = currentUser
 
         vm.login = login;
 
 
         function login() {
-
-            var result = dataserviceAccount.login(vm.username, vm.password);
-
+            dataserviceAccount.login(vm.username, vm.password);
         }
     }
 })();

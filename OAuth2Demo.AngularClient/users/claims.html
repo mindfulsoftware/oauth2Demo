@@ -1,3 +1,7 @@
 ﻿<div>
     <h2>{{ vm.title }}</h2>
+
+    <div ng-repeat="claim in vm.claims">
+      <h4><b>{{claim.m_type}}:</b> {{ claim.m_value}}</h4>  
+    </div>
 </div>

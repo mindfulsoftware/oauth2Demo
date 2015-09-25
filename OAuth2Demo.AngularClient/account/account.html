@@ -2,7 +2,10 @@
     <h2>{{ vm.title }}</h2>
 
     <div class="col-md-offset-4 col-md-3">
-        <form novalidate>
+        <div ng-show="vm.currentUser.loggedIn">
+            <h3>Hello {{ vm.currentUser.username }}</h3>
+        </div>
+        <form ng-if="!vm.currentUser.loggedIn" novalidate>
             <div class="form-group">
                 <label>Username</label>
                 <input type="text" class="form-control" placeholder="Username" ng-model="vm.username">

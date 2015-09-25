@@ -8,7 +8,7 @@ namespace OAuth2Demo.ApiClient.Infrastructure {
         public override Task<bool> CheckAccessAsync(ResourceAuthorizationContext context) {
 
             switch (context.Resource.First().Value) {
-                case "values":
+                case "claims":
                     return AuthorizeValues(context);
                 default:
                     return Nok();
